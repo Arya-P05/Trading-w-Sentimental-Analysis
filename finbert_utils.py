@@ -18,6 +18,8 @@ def estimate_sentiment(news):
         probability = result[torch.argmax(result)]
         sentiment = labels[torch.argmax(result)]
         return probability, sentiment
+    else:
+        return 0, labels[-1]
 
 
 if __name__ == "__main__":
